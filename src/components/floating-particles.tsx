@@ -20,7 +20,6 @@ interface ParticlesProps {
 
 export default function FloatingParticles({ count = 50, colors = ["#3b82f6", "#a855f7", "#ec4899"] }: ParticlesProps) {
   const [particles, setParticles] = useState<Particle[]>([])
-  const [scrollY, setScrollY] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -36,15 +35,6 @@ export default function FloatingParticles({ count = 50, colors = ["#3b82f6", "#a
     }))
     setParticles(generatedParticles)
   }, [count, colors])
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
 
   return (
     <div
