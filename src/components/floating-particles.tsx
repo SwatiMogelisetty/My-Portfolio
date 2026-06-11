@@ -40,7 +40,7 @@ export default function FloatingParticles({ count = 50, colors = ["#3b82f6", "#a
     <div
       ref={containerRef}
       className="fixed inset-0 pointer-events-none overflow-hidden"
-      style={{ zIndex: 0 }}
+      style={{ zIndex: 1 }}
     >
       {particles.map((particle) => (
         <motion.div
