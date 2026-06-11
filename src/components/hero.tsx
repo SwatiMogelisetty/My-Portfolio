@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Download, Mail, Github, Linkedin, ArrowRight } from "lucide-react"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 
 const roles = ["Senior Software Engineer", "AI Innovator", "Full-Stack Builder", "Cloud Architect"]
@@ -76,10 +77,9 @@ export default function Hero() {
           {/* Profile image - Falling coin animation */}
           <motion.div
             className="mx-auto mb-8 w-32 h-32 rounded-full relative overflow-hidden"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 400 }}
             initial={{ y: -400, opacity: 0, rotateZ: -180 }}
             animate={{ y: 0, opacity: 1, rotateZ: 360 }}
+            whileHover={{ scale: 1.05 }}
             transition={{
               duration: 1.2,
               type: "spring",
@@ -108,9 +108,11 @@ export default function Hero() {
 
             {/* Inner content with padding */}
             <div className="absolute inset-0.5 rounded-full bg-background flex items-center justify-center overflow-hidden p-1">
-              <img
+              <Image
                 src="/profile.jpg"
                 alt="SWATI M"
+                width={128}
+                height={128}
                 className="w-full h-full rounded-full object-cover"
               />
             </div>

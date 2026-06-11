@@ -78,7 +78,8 @@ export default function RootLayout({
           {children}
         </div>
         
-        {/* Google Analytics */}
+        {/* Google Analytics - Disabled until GA ID is configured */}
+        {/* 
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
@@ -93,6 +94,7 @@ export default function RootLayout({
             `,
           }}
         />
+        */}
       </body>
     </html>
   )

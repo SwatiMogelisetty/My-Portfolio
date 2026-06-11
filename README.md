@@ -258,4 +258,4 @@ For questions or issues, feel free to reach out or open an issue on GitHub.
 
 ---
 
-Built with ❤️ by SWATI M | © 2024. All rights reserved.
+Built with ❤️ by SWATI M | © 2026. All rights reserved.
