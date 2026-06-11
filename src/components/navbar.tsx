@@ -156,7 +156,7 @@ export default function Navbar() {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -400, opacity: 0 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 glass border-r border-blue-500/10 z-50 overflow-y-auto"
+                className="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 border-r border-blue-500/10 z-50 overflow-y-auto bg-background/80 backdrop-blur-sm"
               >
                 <div className="px-6 py-4 space-y-4">
                   {navItems.map((item) => (
@@ -166,6 +166,7 @@ export default function Navbar() {
                       onClick={(e) => {
                         e.preventDefault()
                         handleNavClick(item.href)
+                        setIsOpen(false)
                       }}
                       className={`block px-4 py-3 rounded-lg font-semibold transition-all ${
                         activeSection === item.id
@@ -205,6 +206,7 @@ export default function Navbar() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="p-2 rounded-lg glass border border-blue-500/10 hover:border-blue-500/30 text-muted-foreground hover:text-blue-400 transition-colors"
+                          onClick={() => setIsOpen(false)}
                         >
                           <social.icon className="w-5 h-5" />
                         </a>
