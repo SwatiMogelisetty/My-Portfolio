@@ -156,7 +156,7 @@ export default function Navbar() {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -400, opacity: 0 }}
                 transition={{ type: "spring", damping: 25, stiffness: 300 }}
-                className="fixed left-0 top-0 h-full w-64 glass border-r border-blue-500/10 z-50 pt-20 overflow-y-auto"
+                className="fixed left-0 top-16 h-[calc(100vh-64px)] w-64 glass border-r border-blue-500/10 z-50 overflow-y-auto"
               >
                 <div className="px-6 py-4 space-y-4">
                   {navItems.map((item) => (
